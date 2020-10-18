@@ -167,6 +167,7 @@
       thisProduct.cartButton.addEventListener('click', function (event) {
         event.preventDefault();
         thisProduct.processOrder();
+        thisProduct.addToCart();
       });
     }
     processOrder() {
@@ -221,11 +222,20 @@
         }
         /* END LOOP: for each paramId in thisProduct.data.params */
       }
+      // [*] Old version, not containing part which's responsible for adding product price&specs to cart etc. 
       /* multiply price by amount */
       //console.log(thisProduct.amountWidget);
-      price *= thisProduct.amountWidget.value;
+      //price *= thisProduct.amountWidget.value;
       /* set the contents of thisProduct.priceElem to be the value of variable price */
-      thisProduct.priceElem.innerHTML = price;
+      //thisProduct.priceElem.innerHTML = price;
+
+      /* multiply price by amount */
+      thisProduct.priceSingle = price; //Setting the priceSingle as holder for single piece price
+      thisProduct.price = thisProduct.priceSingle * thisProduct.amountWidget.value;  // .price as the final price that will be added to cart after clicking "add to cart" button.
+
+      /* set the contents of thisProduct.priceElem to be the value of variable price */
+      thisProduct.priceElem.innerHTML = thisProduct.price; //replacing the innerHTML of element with the final price
+      console.log(thisProduct.params);
     }
     initAmountWidget() {
       const thisProduct = this;
@@ -235,6 +245,12 @@
       });
 
       thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
+    }
+    addToCart() {
+      const thisProduct = this;
+      thisProduct.name = thisProduct.data.name;
+      thisProduct.amount = thisProduct.amountWidget.value;
+      app.cart.add(thisProduct);
     }
   }
 
@@ -320,8 +336,20 @@
       thisCart.dom = {};
       thisCart.dom.wrapper = element;
       thisCart.dom.toggleTrigger = thisCart.dom.wrapper.querySelector(select.cart.toggleTrigger);
+      thisCart.dom.productList = document.querySelector(select.containerOf.cart);
     }
 
+    add(menuProduct) {
+      const thisCart = this;
+      /* Generate HTML based on template */
+      const generatedHtml = templates.cartProduct(thisCart);
+      /* Create DOM from Html template / save it to generatedDom const */
+      const generatedDom = utils.createDOMFromHTML(generatedHtml);
+      /* Add DOM elements to thisCart.dom.productList */
+      //thisCart.dom.productList = generatedDom;
+      thisCart.dom.productList.appendChild(generatedDom);
+    }
+    
     initActions() {
       const thisCart = this;
 
