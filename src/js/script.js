@@ -359,6 +359,32 @@
     }
   }
 
+  class CartProduct{
+    constructor(){
+      const thisCartProduct = this;
+
+      thisCartProduct.id = menuProduct.id;
+      thisCartProduct.name = menuProduct.name;
+      thisCartProduct.price = menuProduct.price;
+      thisCartProduct.priceSingle = menuProduct.priceSingle;
+      thisCartProduct.amount = menuProduct.amount;
+      console.log(thisCartProduct);
+
+      thisCartProduct.params = JSON.parse(JSON.stringify(menuProduct.params));
+      this.getElements(thisCartProduct);
+    }
+
+    getElements(element){
+      const thisCartProduct = this;
+
+      thisCartProduct.dom = {};
+      thisCartProduct.dom.wrapper = element;
+      thisCartProduct.dom.amountWidget = wrapper.querySelector(select.cartProduct.amountWidget);
+      thisCartProduct.dom.price = wrapper.querySelector(select.cartProduct.price);
+      thisCartProduct.dom.edit = wrapper.querySelector(select.cartProduct.edit);
+      thisCartProduct.dom.remove = wrapper.querySelector(select.cartProduct.remove);
+    }
+  }
   const app = {
     initData: function () {
       const thisApp = this;
