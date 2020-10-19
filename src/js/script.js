@@ -336,13 +336,13 @@
       thisCart.dom = {};
       thisCart.dom.wrapper = element;
       thisCart.dom.toggleTrigger = thisCart.dom.wrapper.querySelector(select.cart.toggleTrigger);
-      thisCart.dom.productList = document.querySelector(select.containerOf.cart);
+      thisCart.dom.productList = document.querySelector(select.cart.productList);
     }
 
     add(menuProduct) {
       const thisCart = this;
       /* Generate HTML based on template */
-      const generatedHtml = templates.cartProduct(thisCart);
+      const generatedHtml = templates.cartProduct(menuProduct);
       /* Create DOM from Html template / save it to generatedDom const */
       const generatedDom = utils.createDOMFromHTML(generatedHtml);
       /* Add DOM elements to thisCart.dom.productList */
