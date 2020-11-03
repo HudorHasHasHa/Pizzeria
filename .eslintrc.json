@@ -5,7 +5,8 @@
     },
     "extends": "eslint:recommended",
     "parserOptions": {
-        "ecmaVersion": 2015
+        "ecmaVersion": 2015,
+        "sourceType": "module"
     },
     "rules": {
         "indent": [
@@ -27,5 +28,10 @@
         "no-console": [
             "off"
         ]
+    },
+    "globals": {
+      "Handlebars": true,
+      "flatpickr": true,
+      "rangeSlider": true
     }
 }
