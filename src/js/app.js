@@ -2,6 +2,7 @@ import { settings, select, classNames } from './settings.js';
 import Product from './components/Product.js';
 import Cart from './components/Cart.js';
 import Booking from './components/Booking.js';
+//import Slider from './components/Slider.js';
 
 const app = {
   initPages: function () {
@@ -108,6 +109,12 @@ const app = {
       app.cart.add(event.detail.product);
     });
   },
+  /*
+  initSlider: function () {
+    const thisSlider = this;
+
+    thisSlider.slider = new Slider(thisSlider);
+  },*/
 
   init: function () {
     const thisApp = this;
@@ -121,6 +128,7 @@ const app = {
     //thisApp.initMenu();
     thisApp.initCart();
     thisApp.initBooking();
+    //thisApp.initSlider();
   },
 };
 

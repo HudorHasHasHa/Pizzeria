@@ -1,0 +1,119 @@
+/* Global */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.home-wrapper {
+  margin-top: 40px;
+  padding: 70px 50px;
+  background-color: $color-light;
+}
+
+.home-wrapper .first-section .row{
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+// FIRST SECTION START //
+
+.order-image{
+  background-image: url('https://i.ibb.co/zF2218r/pizza-1.jpg');
+  background-size: cover;
+  margin: 0 5px 5px 0;
+  border-radius: 8px;
+}
+
+.booking-image{
+  background-image: url('https://i.ibb.co/zF2218r/pizza-1.jpg');
+  background-size: cover;
+  margin: 0 0 5px 5px;
+  border-radius: 8px;
+}
+
+.opening-hours{
+  background-color: red;
+  border-radius: 8px;
+}
+
+// FIRST SECTION END //
+
+
+//SECOND SECTION -CAROUSEL START
+.second-section{
+  min-height: 500px;
+  object-fit: cover;
+  margin-top: 100px;
+  min-height: 200px;
+  display: flex;
+  padding: 0;
+}
+
+.image-carousel {
+  min-height: 200px;
+  background: url('https://i.postimg.cc/DfsvQk5V/pizza-3.jpg') center;
+  background-size: cover;
+  padding: 57px 75px;
+  border-radius: 5px;
+}
+
+.carousel-text{
+  h3{
+    font-size: 26px;
+  }
+  p{
+    font-size: 12px;
+  }
+}
+
+.carousel-wrapper{
+  min-height: 200px;
+}
+
+.carousel-wrapper-inner{
+  bottom: 0;
+}
+
+.carousel-indicators{
+  list-style: none;
+  position: absolute;
+}
+
+.carousel-indicators li{
+  width: 15px;
+  height: 15px;
+  background-color: gray;
+  border-radius: 50%;
+  margin-top: 15px;
+}
+
+.carousel-indicators li.active{
+  background-color: darkslategray;
+}
+
+//SECOND SECTION -CAROUSEL END
+
+// THIRD SECTION GALLERY START //
+
+.third-section{
+  margin-top: 100px;
+  min-height: 300px;
+}
+
+.third-section img {
+  height: 120px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*
+(https://i.ibb.co/QXGMCyV/pizza-4.jpg)
+(https://i.ibb.co/C9TyTtD/pizza-5.jpg)
+(https://i.ibb.co/12PjRbB/pizza-6.jpg)
+(https://i.ibb.co/Mh8Pg0B/pizza-7.jpg)
+(https://i.ibb.co/9b4vsCF/pizza-8.jpg)
+(https://i.ibb.co/5LdX87W/pizza-9.jpg)
+*/
