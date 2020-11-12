@@ -1,7 +1,7 @@
 /*
-//class Slider{
+//class Carousel{
 
-function slider(){
+function carousel(){
   let thisSlide = document.querySelector('carousel');
   const templateSlide = Handlebars.compile(document.getElementById('template-slide').innerHTML);
 
@@ -31,8 +31,8 @@ function slider(){
     thisSlide.insertAdjacentHTML('beforeend', generatedHTML);
   }
 
-  setTimeout(slider, 3000);
+  setTimeout(carousel, 3000);
 }
 
-slider();
-//export default Slider;*/
+carousel();
+//export default carousel;*/
