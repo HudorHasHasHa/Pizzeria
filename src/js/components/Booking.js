@@ -120,7 +120,6 @@ class Booking {
       }else{
         thisBooking.booked[date][hourBlock].push(table);
       }
-
     }
   }
 
