@@ -49,7 +49,7 @@ class Product {
       /* prevent default action for event */
       event.preventDefault();
       /* toggle active class on element of thisProduct */
-      thisProduct.element.classList.add('active');
+      thisProduct.element.classList.toggle('active');
       /* find all active products */
       const activeLinks = document.querySelectorAll(select.all.menuProductsActive);
       /* START LOOP: for each active product */
