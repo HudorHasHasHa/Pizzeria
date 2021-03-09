@@ -20,6 +20,24 @@
 
 // FIRST SECTION START //
 
+.h-parrent{
+  h2{
+    top: 25%;
+    transform: translate(0,100%);
+  }
+}
+
+.h-parrent{
+  h2{
+    top: 25%;
+    transform: translate(0,60%);
+  }
+  h3{
+    top: 25%;
+    transform: translate(0,60%);
+  }
+}
+
 .order-image{
   background-image: url('https://i.ibb.co/zF2218r/pizza-1.jpg');
   background-size: cover;
