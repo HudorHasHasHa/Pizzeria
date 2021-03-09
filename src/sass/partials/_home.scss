@@ -22,6 +22,7 @@
 
 .h-parrent{
   h2{
+    color: white;
     top: 25%;
     transform: translate(0,100%);
   }
@@ -29,10 +30,12 @@
 
 .h-parrent2{
   h2{
+    color: white;
     top: 25%;
     transform: translate(0,60%);
   }
   h3{
+    color: white;
     top: 25%;
     transform: translate(0,60%);
   }
@@ -46,14 +49,14 @@
 }
 
 .booking-image{
-  background-image: url('https://i.ibb.co/zF2218r/pizza-1.jpg');
+  background-image: url('https://ibb.co/mJh0hTg');
   background-size: cover;
   margin: 0 0 5px 5px;
   border-radius: 8px;
 }
 
 .opening-hours{
-  background-color: red;
+  background-color: rgb(219, 82, 77);
   border-radius: 8px;
 }
 
