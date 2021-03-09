@@ -131,6 +131,20 @@
   object-fit: cover;
 }
 
+.gallery-icons{
+  z-index: 1;
+  transform: translate(36%, -73px);
+  padding-right: 5px;
+
+  i{
+    padding: 0 10px;
+  }
+
+  &:hover{
+    color:rgb(219, 82, 77);
+  }
+}
+
 /*
 (https://i.ibb.co/QXGMCyV/pizza-4.jpg)
 (https://i.ibb.co/C9TyTtD/pizza-5.jpg)
